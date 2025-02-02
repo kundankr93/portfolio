@@ -4,294 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kundan-portfolio</title>
+    <link rel="stylesheet" href="resume.html">
     <style>
-        * {
+       
+       @media (max-width: 960px) {
+  .firstsection, .vertical-title, .vertical-desc, .vertical, .footer_main {
+    flex-direction: column;
+  }
+}
+
+        *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        body {
-            background-color: rgb(0, 0, 33);
+        body{background-color: rgb(0, 0, 33);
             color: white;
-            font-family: Arial, sans-serif;
+
         }
-        nav {
+        nav{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             height: 60px;
             background-color: rgb(25, 25, 38);
-            padding: 0 20px;
         }
-        nav ul {
+        nav ul{
             display: flex;
+            justify-content: center;
         }
-        nav ul li {
+        nav ul li{
             list-style: none;
-            margin: 0 15px;
+            margin: 0 23px;
+            
         }
-        .left {
+        .left{
             font-size: 1.3rem;
         }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover {
-            color: rgb(153, 153, 226);
-            font-size: 1.1rem;
-        }
-
-        /* Section Styles */
-        .firstsection {
+        .firstsection{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 23px 0;
-            flex-wrap: wrap;
-            text-align: center;
+            margin:  23px 0;
+        }
+        .firstsection div >{
+             width: 30%;
         }
         .leftsection {
-            font-size: 2rem;
-            max-width: 45%;
+            font-size: 3rem;
+            
         }
-        .rightsection img {
+        .rightsection img{
             width: 80%;
             margin: 50px 0;
-            max-width: 400px;
         }
-        .button {
-            margin-top: 20px;
-        }
-        .btn {
-            padding: 12px;
-            background-color: purple;
-            border: 2px solid transparent;
-            border-radius: 6px;
-            cursor: pointer;
+        nav ul li a{
+            text-decoration: none;
             color: white;
-            font-size: 1rem;
-            margin: 5px;
-            transition: background-color 0.3s ease;
         }
-        .btn:hover {
-            background-color: rgb(101, 101, 234);
+        nav ul li a:hover{
+            color: rgb(153, 153, 226) ;
+            font-size: 1.1rem;
+
         }
-        
-        /* Work Experience Section */
-        .secondsection {
+        #element{
+            color: rgb(101, 101, 234);
+        }
+        .secondsection{
             max-width: 80vw;
             margin: auto;
             height: 80vh;
-            text-align: center;
+            display: flex;
         }
-        .secondsection h1 {
+        main hr{
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        .secondsection h1{
             font-size: 1.5rem;
-            margin-bottom: 20px;
         }
-        .box {
+        .secondsection .box{
+            background: white;
+                width: 77vw;
+                height: 2px;
+                margin: 56px 0; 
+                display: flex;
+        }
+        .secondsection .vertical{
+            height: 50px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px ;
+        
+
+        }
+        .image-top{
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+        .vertical-title{
+            position: relative;
+            top: 75px;
+            width: 150px;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
         }
-        .vertical {
-            background: rgb(25, 25, 38);
-            width: 30%;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            color: white;
-            max-width: 250px;
-            flex-grow: 1;
-            min-width: 200px;
-        }
-        .vertical-title {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        .vertical-desc {
-            font-size: 0.9rem;
+        .vertical-desc{
+            position: relative;
+            top: 86px;
             color: gray;
-            margin-top: 10px;
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: rgb(110, 110, 114);
-            height: 150px;
-            padding: 20px 0;
-        }
-        .footer {
+            width: 150px;
+            font-size: 10px;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
         }
-        .footer ul {
-            list-style: none;
-            padding: 0;
+        .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+            width: 100%;
+            background-color: beige;
         }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer-rights {
-            color: rgba(8, 8, 8, 0.874);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .firstsection {
-                flex-direction: column;
-                text-align: center;
-            }
-            .leftsection {
-                font-size: 1.5rem;
-                max-width: 100%;
-            }
-            .rightsection img {
-                width: 100%;
-                margin: 20px 0;
-            }
-            .box {
-                flex-direction: column;
-                align-items: center;
-            }
-            .vertical {
-                width: 90%;
-                margin: 10px 0;
-            }
-            footer {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+       .footer ul{
+        list-style: none;
+       }
+       .footer > div{
+        width: 223px;
+       }
+       p{
+        color: red;
+       }
+       h3{
+        color: rgba(11, 238, 57, 0.874);
+       }
+       .leftsection .btn{
+        padding: 12px;
+        background-color: purple;
+        border: 2px;
+        border-radius: 6px;
+        cursor: pointer;
+        
+       }
+       .footer_second .btn{
+    
+        color: blue;
+        border: 2px;
+        cursor: pointer;
+        margin: 2px;
+       
+       }
+       
+       .footer_main{
+        display: flex;
+        margin: auto;
+       }
+       .footer-rights{
+        color: rgb(211, 105, 5);
+       }
     </style>
 </head>
+
+
 <body>
     <header>
         <nav>
-            <div class="left">Kundan's Portfolio</div>
+            <div class="left">kundan's portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="./contact.html">Contact me</a></li>
-                </ul>
+                <li><a href="/">Home        </a></li>
+                <li><a href="/">About      </a> </li>
+                <li><a href="/">Projects    </a></li>
+                <li><a href="/">Contact </a></li>
+            </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                <h1>Hi, I'm Kundan</h1>
-                <div>
-                    I am a web developer
-                </div>
-                <div id="element"></div>
-                <div class="button">
-                    <button class="btn" onclick="redirectToPDF()">Resume</button>
-                    <script>
-                        function redirectToPDF() {
-                            window.location.href = "resume.pdf";
-                        }
-                    </script>
-                    <a href="https://github.com/kundankr93">
-                        <button class="btn">Visit Github</button>
-                    </a>
-                </div>
+    <section class="firstsection">
+        <div class="leftsection"> Hii, i'm kundan 
+            <div>
+                i am a web developer
             </div>
-            <div class="rightsection">
-                <img src="developer1.webp" alt="Developer Image">
-            </div>
-        </section>
+            <span id="element"></span>
+            <div class="button">
+         
+            <button class="btn" onclick="redirectToPDF()">Resume</button>
 
-        <hr>
+            <script>
+              function redirectToPDF() {
+                window.location.href = "resume.pdf";
+              }
+              </script>
+             <a href="https://github.com/kundankr93"> <button class="btn" > Visit Github</button></a>
+        </div>
+    </div>
+    </div>
 
+        <div class="rightsection"> 
+            <img src="developer1.webp" alt="">
+        </div>
+
+    </section>
+<hr>
         <section class="secondsection">
-            <h1>Work Experience</h1>
+           
+            <h1>Work experience</h1>
+
             <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="developer1.webp" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2024-25)
-                    </div>
-                    <div class="vertical-desc">
-                        Kundan is a passionate developer known for innovative problem-solving and clean coding practices.
-                    </div>
+              
+        
+            <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
+                <div class="vertical-title">
+                    Frontened Developer(2024-25)
                 </div>
-
-                <div class="vertical">
-                    <img class="image-top" src="developer1.webp" alt="">
-                    <div class="vertical-title">
-                        Frontend Developer (2025-26)
-                    </div>
-                    <div class="vertical-desc">
-                        Kundan is a passionate developer known for innovative problem-solving and clean coding practices.
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class="image-top" src="developer1.webp" alt="">
-                    <div class="vertical-title">
-                        Backend Developer (2024-25)
-                    </div>
-                    <div class="vertical-desc">
-                        Kundan is a passionate developer known for innovative problem-solving and clean coding practices.
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class="image-top" src="developer1.webp" alt="">
-                    <div class="vertical-title">
-                        Node.js Developer (2024-25)
-                    </div>
-                    <div class="vertical-desc">
-                        Kundan is a passionate developer known for innovative problem-solving and clean coding practices.
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class="image-top" src="developer1.webp" alt="">
-                    <div class="vertical-title">
-                        MERN-Stack Developer (2024-25)
-                    </div>
-                    <div class="vertical-desc">
-                        Kundan is a passionate developer known for innovative problem-solving and clean coding practices.
-                    </div>
+                <div class="vertical-desc">
+                    Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
                 </div>
             </div>
+
+            <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
+                <div class="vertical-title">
+                    Backened Developer(2024-25)
+                </div>
+                <div class="vertical-desc">
+                    Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
+                </div>
+            </div>
+
+            <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
+                <div class="vertical-title">
+                    Mern-Stack Developer(2024-25)
+                </div>
+                <div class="vertical-desc">
+                    Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
+                </div>
+            </div>
+    
+            </div>
+            </div>
+
         </section>
+
     </main>
 
-    <footer>
+    <footer class="footer_main">
         <div class="footer">
             <div class="footer_first">
-                <h3>Kundan Developer's Portfolio</h3>
+                <h3>kundan developer's portfolio </h3> 
             </div>
             <div class="footer_second">
-                <p>Contact:</p>
-                <ul>
-                    <li><a href="tel:6206314809">Contact Number</a></li>
-                    <li><a href="https://www.instagram.com/__kundan_93/">@Instagram</a></li>
-                    <li><a href="mailto:kundanpc04@gmail.com">Email</a></li>
-                </ul>
+                <section>
+               <div class="contact">
+                    <p>contact : </p>
+                   <li> <a class="btn" href="tel:6206314809"> Contact : </a> </li>
+                   <li>  <a class="btn"  href="https://www.instagram.com/__kundan_93/"> @instagram</a></li>
+                   <li>  <a class="btn" href="mailto:kundanpc04@gmail.com"> Mail </a></li>
+                </div> 
+            </section>
             </div>
             <div class="footer-rights">
-                Copyright © kundanportfolio.com | All rights reserved
-            </div>
-        </div>
-    </footer>
+               copyright © kundanportfolio.com | All rights reserved
 
+            </div>
+    </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Software Engineer', 'Web Designer'],
-            typeSpeed: 50,
+          strings: [' Web developer', 'Software Engineer', ' Web designer'],
+          typeSpeed: 50,
         });
-    </script>
+      </script>
 </body>
 </html>
