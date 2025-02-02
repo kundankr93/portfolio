@@ -9,17 +9,23 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body {
             background-color: rgb(0, 0, 33);
             color: white;
+            font-family: Arial, sans-serif;
         }
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 60px;
             background-color: rgb(25, 25, 38);
+            padding: 0 20px;
+        }
+        .left {
+            font-size: 1.3rem;
         }
         nav ul {
             display: flex;
@@ -27,30 +33,12 @@
         }
         nav ul li {
             list-style: none;
-            margin: 0 23px;
-        }
-        .left {
-            font-size: 1.3rem;
-        }
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 23px 0;
-        }
-        .firstsection div {
-            width: 30%;
-        }
-        .leftsection {
-            font-size: 3rem;
-        }
-        .rightsection img {
-            width: 80%;
-            margin: 50px 0;
+            margin: 0 15px;
         }
         nav ul li a {
             text-decoration: none;
             color: white;
+            font-size: 1rem;
         }
         nav ul li a:hover {
             color: rgb(153, 153, 226);
@@ -59,66 +47,88 @@
         #element {
             color: rgb(101, 101, 234);
         }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .firstsection div {
+            width: 45%;
+        }
+        .leftsection {
+            font-size: 2rem;
+        }
+        .rightsection img {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            padding: 12px;
+            background-color: purple;
+            border: 2px solid purple;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+        }
         .secondsection {
             max-width: 80vw;
             margin: auto;
             height: 80vh;
-        }
-        main hr {
-            border: 0;
-            background-color: #9c97f1;
-            height: 1.2px;
-            margin: 60px 84px;
+            padding: 40px 0;
         }
         .secondsection h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .secondsection .box {
-            background: white;
-            width: 77vw;
-            height: 2px;
-            margin: 56px 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        .secondsection .vertical {
-            height: 50px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
+        .vertical {
+            margin: 20px;
+            text-align: center;
+            width: 250px;
         }
-        .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
+        .vertical img {
+            width: 60px;
+            border-radius: 50%;
         }
         .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
+            margin-top: 10px;
+            font-weight: bold;
         }
         .vertical-desc {
-            position: relative;
-            top: 86px;
+            margin-top: 10px;
             color: gray;
-            width: 150px;
-            font-size: 10px;
-            display: flex;
+            font-size: 0.9rem;
         }
         footer {
             background-color: rgb(110, 110, 114);
-            height: 150px;
+            padding: 40px 0;
         }
         .footer {
             display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
         }
-        .footer ul {
-            list-style: none;
-        }
-        .footer > div {
-            width: 223px;
+        .footer_first,
+        .footer_second,
+        .footer-rights {
+            width: 100%;
+            margin-bottom: 20px;
         }
         p {
             color: red;
@@ -126,12 +136,64 @@
         h3 {
             color: rgba(8, 8, 8, 0.874);
         }
-        .leftsection .btn {
-            padding: 12px;
-            background-color: purple;
-            border: 2px;
-            border-radius: 6px;
-            cursor: pointer;
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .firstsection {
+                flex-direction: column;
+                align-items: center;
+            }
+            .leftsection {
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            .rightsection img {
+                max-width: 100%;
+                margin: 30px 0;
+            }
+            .buttons {
+                flex-direction: row;
+                gap: 20px;
+            }
+            .secondsection {
+                padding: 20px;
+            }
+            .secondsection h1 {
+                font-size: 1.5rem;
+            }
+            .secondsection .box {
+                flex-direction: column;
+                align-items: center;
+            }
+            .vertical {
+                width: 80%;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 10px;
+            }
+            .left {
+                font-size: 1rem;
+            }
+            .leftsection {
+                font-size: 1.5rem;
+            }
+            .btn {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            .vertical img {
+                width: 50px;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -139,7 +201,7 @@
 <body>
     <header>
         <nav>
-            <div class="left">kundan's portfolio</div>
+            <div class="left">Kundan's Portfolio</div>
             <div class="right">
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -154,7 +216,7 @@
     <main>
         <section class="firstsection">
             <div class="leftsection">
-                Hii, I'm Kundan
+                Hi, I'm Kundan
                 <div>
                     I am a web developer
                 </div>
@@ -173,12 +235,11 @@
         <hr>
 
         <section class="secondsection">
-            <h1>Work experience</h1>
+            <h1>Work Experience</h1>
 
             <div class="box">
                 <div class="vertical">
                     <img class="image-top" src="developer1.webp" alt="">
-
                     <div class="vertical-title">
                         HTML Developer (2024-25)
                     </div>
