@@ -3,18 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Beige background */
+        }
+
+        section {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 250px;
+            margin: 5px 0;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+            }
+
+            .button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <section>
-        <p>
-            <ul>
-                <li><a href="mailto:kundankr9905030@gmail.com"> Email </a></li>
-                <li> <a href="https://www.linkedin.com/in/kundan-kumar-6a609731a/">linkedin</a></li>
-                <li> <a href="https://github.com/kundankr93">Github</a></li>
-                <li> <a href="tel:6206314809">Phone</a></li>
-            </ul>
-        </p>
+        <h2>Contact Information</h2>
+        <ul>
+            <li><a class="button" href="mailto:kundankr9905030@gmail.com">Email</a></li>
+            <li><a class="button" href="https://www.linkedin.com/in/kundan-kumar-6a609731a/">LinkedIn</a></li>
+            <li><a class="button" href="https://github.com/kundankr93">GitHub</a></li>
+            <li><a class="button" href="tel:6206314809">Phone</a></li>
+        </ul>
     </section>
 </body>
 </html>
