@@ -6,13 +6,6 @@
     <title>kundan-portfolio</title>
     <link rel="stylesheet" href="resume.html">
     <style>
-       
-       @media (max-width: 960px) {
-  .firstsection, .vertical-title, .vertical-desc, .vertical, .footer_main {
-    flex-direction: column;
-  }
-}
-
         *{
             margin: 0;
             padding: 0;
@@ -61,7 +54,7 @@
             text-decoration: none;
             color: white;
         }
-        nav ul li a:hover{
+        nav ul li a :hover{
             color: rgb(153, 153, 226) ;
             font-size: 1.1rem;
 
@@ -73,7 +66,6 @@
             max-width: 80vw;
             margin: auto;
             height: 80vh;
-            display: flex;
         }
         main hr{
             border: 0;
@@ -109,7 +101,6 @@
             position: relative;
             top: 75px;
             width: 150px;
-            display: flex;
         }
         .vertical-desc{
             position: relative;
@@ -119,12 +110,14 @@
             font-size: 10px;
             display: flex;
         }
+        footer{
+            background-color: rgb(110, 110, 114);
+            height: 150px;
+        }
         .footer{
             display: flex;
             padding: 23px 122px;
             justify-content: space-evenly;
-            width: 100%;
-            background-color: beige;
         }
        .footer ul{
         list-style: none;
@@ -136,7 +129,7 @@
         color: red;
        }
        h3{
-        color: rgba(11, 238, 57, 0.874);
+        color: rgba(8, 8, 8, 0.874);
        }
        .leftsection .btn{
         padding: 12px;
@@ -145,22 +138,6 @@
         border-radius: 6px;
         cursor: pointer;
         
-       }
-       .footer_second .btn{
-    
-        color: blue;
-        border: 2px;
-        cursor: pointer;
-        margin: 2px;
-       
-       }
-       
-       .footer_main{
-        display: flex;
-        margin: auto;
-       }
-       .footer-rights{
-        color: rgb(211, 105, 5);
        }
     </style>
 </head>
@@ -173,7 +150,7 @@
             <div class="right">
                 <ul>
                 <li><a href="/">Home        </a></li>
-                <li><a href="/">About      </a> </li>
+                <li><a href="/">About       </li>
                 <li><a href="/">Projects    </a></li>
                 <li><a href="/">Contact </a></li>
             </ul>
@@ -188,19 +165,15 @@
                 i am a web developer
             </div>
             <span id="element"></span>
-            <div class="button">
          
-            <button class="btn" onclick="redirectToPDF()">Resume</button>
+         <div class="buttons">
+            <button class="btn" > Resume</button>
+            
+            <button class="btn" > Visit Github</button>
 
-            <script>
-              function redirectToPDF() {
-                window.location.href = "resume.pdf";
-              }
-              </script>
-             <a href="https://github.com/kundankr93"> <button class="btn" > Visit Github</button></a>
+            </div>
         </div>
-    </div>
-    </div>
+
 
         <div class="rightsection"> 
             <img src="developer1.webp" alt="">
@@ -213,11 +186,19 @@
             <h1>Work experience</h1>
 
             <div class="box">
-              
+              <div class="vertical"> <img class="image-top" src="developer1.webp" alt="">
+            
+                <div class="vertical-title">
+                    HTML Developer(2024-25)
+                </div>
+                <div class="vertical-desc">
+                    Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
+                </div>
+            </div>
         
             <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
                 <div class="vertical-title">
-                    Frontened Developer(2024-25)
+                    Frontened Developer(2025-26)
                 </div>
                 <div class="vertical-desc">
                     Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
@@ -226,7 +207,7 @@
 
             <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
                 <div class="vertical-title">
-                    Backened Developer(2024-25)
+                    Backened Developer(2026-27)
                 </div>
                 <div class="vertical-desc">
                     Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
@@ -235,7 +216,16 @@
 
             <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
                 <div class="vertical-title">
-                    Mern-Stack Developer(2024-25)
+                  Node.js  Developer(2027-28)
+                </div>
+                <div class="vertical-desc">
+                    Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
+                </div>
+            </div>
+
+            <div class="vertical" > <img class="image-top" src="developer1.webp"  alt="">
+                <div class="vertical-title">
+                    Mern-Stack Developer(2028-29)
                 </div>
                 <div class="vertical-desc">
                     Kundan is a passionate developer known for innovative problem-solving and clean coding practices. With expertise in multiple technologies, Kundan builds efficient, user-friendly solutions, always aiming to enhance user experiences and project success.
@@ -249,20 +239,19 @@
 
     </main>
 
-    <footer class="footer_main">
+    <footer>
         <div class="footer">
             <div class="footer_first">
                 <h3>kundan developer's portfolio </h3> 
             </div>
             <div class="footer_second">
-                <section>
-               <div class="contact">
+                <ul>
                     <p>contact : </p>
-                   <li> <a class="btn" href="tel:6206314809"> Contact : </a> </li>
-                   <li>  <a class="btn"  href="https://www.instagram.com/__kundan_93/"> @instagram</a></li>
-                   <li>  <a class="btn" href="mailto:kundanpc04@gmail.com"> Mail </a></li>
-                </div> 
-            </section>
+                    <li> number : 6206314809</li>
+                    <li><a href="__kundan_93"></a>insta-i'd</li>
+                    <li><a href="kundanpc04@gmail.com">email:</a></li>
+                    <li></li>
+                </ul>
             </div>
             <div class="footer-rights">
                copyright © kundanportfolio.com | All rights reserved
@@ -275,6 +264,6 @@
           strings: [' Web developer', 'Software Engineer', ' Web designer'],
           typeSpeed: 50,
         });
-      </script>
+      </script
 </body>
 </html>
